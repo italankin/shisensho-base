@@ -122,18 +122,16 @@ class CreateSolvableTest(
     }
 
     @Test(timeout = 60_000)
-    @Ignore("Consumes huge amount of memory")
     fun gravity() {
         val (width, tiles) = create(
             """
-            V R J V L N Y X Q M 3 6 A K I 3 M 6
-            N A O % M 1 A I @ W K K P B N Z T F
-            B R 1 V D P 6 Q G U O S @ # W H G 2
-            % Z 0 T L K J # 2 4 2 W U 4 N 4 A @
-            # P J 1 E % 5 5 Y E O U D F Z 0 2 B
-            P 0 Y G L Y E 3 V U Q D S X G Z B S
-            R F I X O H R X T 1 0 Q S % M @ ? !
-            W J I 6 3 D F 4 L H # 5 E H T 5 ! ?
+            J B C I N L D E H F M L
+            L J G B B G A C E N H I
+            M C A L E K C H J L I F
+            D N M B M D M D F K E B
+            F F N E L K G J G N F D
+            B I J K H J M A K D ! ?
+            H H A I I G G K E N ? !
             """
         )
         val solvable = gameFactory.createSolvable(
