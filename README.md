@@ -3,6 +3,8 @@
 Implementation of [Shisen-Sho](https://en.wikipedia.org/wiki/Shisen-Sho) game, used by my
 [Shisen-Sho Android app](https://play.google.com/store/apps/details?id=com.italankin.shisensho).
 
+> This repository contains only source code of Shisen-Sho game, neither Android app nor assets are included.
+
 ## Entry points
 
 * [`ShisenShoGame`](src/main/kotlin/com/italankin/shisensho/game/ShisenShoGame.kt) - interface for the game
