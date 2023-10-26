@@ -166,9 +166,9 @@ class ShisenShoGameImpl(
         if (tilesRemaining == 0) {
             return
         }
-        cachedPossibleMoves = null
         historyPush()
         do {
+            cachedPossibleMoves = null
             if (preserveLayout) {
                 shuffleInPlace(random)
             } else {
