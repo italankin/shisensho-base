@@ -6,6 +6,8 @@ import com.italankin.shisensho.game.gameHeight
 import com.italankin.shisensho.game.gameWidth
 
 /**
+ * Check whether the game is solvable or not.
+ *
  * NB: Can take a long time and huge amount of memory.
  *
  * @return `true`, if game is solvable at least in one way
@@ -56,11 +58,15 @@ private fun ShisenShoGame.isSolvableRecursive(visited: HashSet<String>): Boolean
         if (isSolvableRecursive(visited)) {
             return true
         }
+        // backtrack to previous state
         undo()
     }
     return false
 }
 
+/**
+ * Represents game state with unique string to avoid checking the same states multiple times.
+ */
 private val ShisenShoGame.stateKey: String
     get() {
         val s = StringBuilder(gameWidth * gameHeight)

@@ -11,6 +11,8 @@ import kotlin.random.Random
 
 /**
  * Create solvable game from given [state].
+ *
+ * The resulting game may have different [state] in order to make it solvable.
  */
 fun ShisenShoGameGenerator.GameFactory.createSolvable(
     state: List<TileValue?>,
@@ -19,7 +21,7 @@ fun ShisenShoGameGenerator.GameFactory.createSolvable(
     tileValueMatcher: TileValueMatcher,
     random: Random = Random
 ): ShisenShoGame {
-    // The game is solvable, when one of it's sub-states are solvable, recursively.
+    // The game is solvable, when one of its substates are solvable, recursively.
     // Idea behind algorithm is to solve the game by making random moves
     // and update `state` when we're successfully make a move.
     // If we run out of moves and game is not solved, we shuffle and continue until no tiles left.
